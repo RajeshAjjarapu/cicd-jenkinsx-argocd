@@ -14,9 +14,6 @@ pipeline {
       }
     }
     stage('Build Service') {
-      when {
-        branch 'master'
-      }
       steps {
         container('maven') {     
             sh 'echo Service is successfully build'
@@ -25,9 +22,6 @@ pipeline {
       }
     }
     stage('DeployApp') {
-      when {
-        branch 'master'
-      }
       steps {    
            container('maven') {
             	sh 'wget https://github.com/argoproj/argo-cd/releases/download/v0.11.0/argocd-linux-amd64 -O argocd && chmod +x argocd'
@@ -36,9 +30,6 @@ pipeline {
       }
     }
     stage('Test Service') {
-      when {
-        branch 'master'
-      }
       steps {
         container('maven') {     
             sh 'echo Service is successfully Tested and Signoff Ready'
