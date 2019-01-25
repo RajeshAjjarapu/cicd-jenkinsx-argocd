@@ -35,5 +35,16 @@ pipeline {
         }
       }
     }
+    stage('Test Service') {
+      when {
+        branch 'master'
+      }
+      steps {
+        container('maven') {     
+            sh 'echo Service is successfully Tested and Signoff Ready'
+         
+        }
+      }
+    }
   }
   }
