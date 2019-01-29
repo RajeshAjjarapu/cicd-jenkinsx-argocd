@@ -2,11 +2,12 @@
 
 Pre requistes for running this sample:
 
-Kubernetes should be installed
-Jenkinx should be installed
-Helm Charts should be installed
-Argocd should be installed
-Argo CLi should be installed
+1) Kubernetes should be installed
+2) Jenkinx should be installed
+3) Helm Charts should be installed
+4) Argocd should be installed
+5) Argo CLi should be installed
+
 Running the sample:
 
 1) From Jenkinsx pipeline, create a new pipeline shoosing this repo
